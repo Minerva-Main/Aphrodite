@@ -1,6 +1,6 @@
 // Api urls
 
-const ProxyApi = "https://proxy.techzbots1.workers.dev/?u=https://projectathena.pages.dev/";
+const ProxyApi = "https://athenaproject.chaossecmatthew.workers.dev/";
 const animeapi = "/anime/";
 const recommendationsapi = "/recommendations/";
 
