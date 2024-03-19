@@ -1,6 +1,6 @@
 // Api urls
 
-const ProxyApi = "https://athenaproject.chaossecmatthew.workers.dev/"
+const ProxyApi = "https://proxy.techzbots1.workers.dev/?u=https://projectathena.pages.dev/"
 const searchapi = "/search/";
 
 // Api Server Manager
