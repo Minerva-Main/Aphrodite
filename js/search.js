@@ -140,7 +140,7 @@ async function loadData() {
     } catch (err) {
         document.getElementById("main-section").style.display = "none";
         document.getElementById("error-page").style.display = "block";
-        document.getElementById("error-desc").innerHTML = err;
+        document.getElementById("error-desc").innerHTML = err +"<br> <br>Try to be more precise on the anime name.";
         console.error(err);
     }
 }
