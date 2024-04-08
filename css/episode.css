@@ -1996,3 +1996,96 @@ h2 {
         height: 55px;
     }
 }
+
+.warn {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Additional styling if needed */
+  }
+
+.toast { 
+
+    border: solid #98bcd4; 
+    border-width: 0; 
+    border-left-width: 4px; 
+    background-color: rgba(19,19,21,.75); 
+    padding: .5em 1em; 
+    margin: 1em 0; 
+    color: #98bcd4; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+    -ms-flex-direction: row; 
+    flex-direction: row;
+} 
+
+
+.toast.warn { 
+    
+    border-color: #cd2020; 
+    background: rgba(73,11,11,.5); 
+    color: #d1b5b5;
+} 
+
+:selection { 
+    background: #aaa; 
+    color: #445;
+} 
+
+.toast .icon  { 
+    font-size: 36px; 
+    color: #98bcd4; 
+    margin-right: 16px; 
+    text-align: center; 
+
+} 
+
+
+.toast.warn .icon  { 
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    color: #cd2020;
+} 
+
+.toast .content  { 
+    
+    font-family: Lato,Segoe UI,Tahoma,Verdana,sans-serif; 
+    font-size: 16px; 
+    word-wrap: break-word; 
+    padding: 0; 
+    margin: .25em 0;
+} 
+
+.fa { 
+    display: inline-block; 
+    font: normal normal normal 14px/1 FontAwesome; 
+    font-size: inherit; 
+    text-rendering: auto; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+} 
+
+.fa { 
+    margin-left: .2em; 
+    margin-right: .2em;
+} 
+
+.fa-warning:before,.fa-exclamation-triangle:before { 
+    content: "\f071";
+} 
+
+.toast .heading  { 
+    font-size: .8em; 
+    text-transform: uppercase; 
+    letter-spacing: .3em; 
+    font-family: Geomanist,Segoe UI,Tahoma,Verdana,sans-serif; 
+    color: #fff; 
+    white-space: nowrap;
+} 

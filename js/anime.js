@@ -1,15 +1,14 @@
 // Api urls
 
-const ProxyApi = "https://athenaproject.chaossecmatthew.workers.dev/";
+const ProxyApi = "https://proxy.techzbots1.workers.dev/?u=";
 const animeapi = "/anime/";
 const recommendationsapi = "/recommendations/";
 
 // Api Server Manager
 
 const AvailableServers = [
-    "https://api1.anime-dex.workers.dev",
-    "https://api2.anime-dex.workers.dev",
-    "https://api3.anime-dex.workers.dev",
+    "https://api3.chaossecmatthew.workers.dev",
+    "https://api3.justanrandomhaxor.workers.dev",
 ];
 
 function getApiServer() {
@@ -122,7 +121,7 @@ async function loadAnimeFromGogo(data) {
     console.log("Anime Info loaded");
     RefreshLazyLoader();
 
-    getEpSlider(data["episodes"]);
+
     getEpList(data["episodes"]);
     getRecommendations(data["name"]);
 }
@@ -167,25 +166,7 @@ async function loadAnimeFromAnilist(data) {
 }
 
 // Function to get episode Slider
-async function getEpSlider(total) {
-    let ephtml = "";
 
-    try {
-        for (let i = 0; i < total.length; i++) {
-            const episodeId = total[i][1];
-            const epNum = total[i][0].replaceAll("-", ".");
-            if (Number(epNum) > 0) {
-                ephtml += `<div class=ep-slide><a href="./episode.html?anime_id=${AnimeID}&episode_id=${episodeId}"><img onerror="retryImageLoad(this)" class="lzy_img" src="./static/loading1.gif" data-src=https://thumb.anime-dex.workers.dev/thumb/${episodeId}><div class=ep-title><span>Episode ${epNum}</span></div></a></div>`;
-            }
-        }
-        document.getElementById("ep-slider").innerHTML = ephtml;
-        document.getElementById("slider-main").style.display = "block";
-        RefreshLazyLoader();
-        console.log("Episode Slider loaded");
-    } catch (err) {
-        console.error(err);
-    }
-}
 
 // Retry image load
 function retryImageLoad(img) {
@@ -302,17 +283,6 @@ async function getRecommendations(anime_title) {
     RefreshLazyLoader();
 }
 
-// Function to scroll episode slider
-const windowWidth = window.innerWidth;
-
-function plusSlides(n) {
-    if (n === 1) {
-        document.getElementById("slider-carousel").scrollLeft += windowWidth / 2;
-    }
-    else if (n === -1) {
-        document.getElementById("slider-carousel").scrollLeft -= windowWidth / 2;
-    }
-}
 
 //Running functions
 
@@ -339,7 +309,7 @@ async function loadData() {
         document.getElementById("error-page").style.display = "block";
         document.getElementById("load").style.display = "none";
         document.getElementById("main-content").style.display = "none";
-        document.getElementById("error-desc").innerHTML = err;
+        document.getElementById("error-desc").innerHTML = "No anime episodes yet";
         console.error(err);
     }
 }
